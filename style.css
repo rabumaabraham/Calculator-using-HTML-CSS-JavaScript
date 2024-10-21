@@ -11,15 +11,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: hsl(0, 0%, 15%);
     border-radius: 15px;
-    max-width: 500px;
-    width: 100%; /* Allow it to take full width on smaller screens */
+    max-width: 450px; /* Adjusted for smaller screens */
+    width: 100%; /* Full width on smaller screens */
     overflow: hidden;
 }
 
 #display {
     width: 100%;
-    padding: 20px;
-    font-size: 5rem;
+    padding: 15px; /* Reduced padding */
+    font-size: 4rem; /* Default font size */
     text-align: left;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -31,17 +31,17 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    padding: 25px;
+    padding: 15px; /* Adjusted padding */
 }
 
 button {
     width: 100%;
-    height: 100px;
+    height: 90px; /* Adjusted button height */
     border-radius: 50px;
     border: none;
     background-color: hsl(0, 0%, 30%);
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem; /* Adjusted font size */
     font-weight: bold;
     cursor: pointer;
 }
@@ -68,28 +68,37 @@ button:active {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 600px) {
+    #calculator {
+        transform: scale(0.9); 
+        transform-origin: center;
+    }
+
     #display {
-        font-size: 4rem; /* Decrease font size on smaller screens */
-        padding: 15px;   /* Adjust padding */
+        font-size: 3.5rem; 
+        padding: 10px; 
     }
 
     #keys {
-        padding: 15px;  /* Adjust padding */
+        padding: 10px; 
     }
 
     button {
-        height: 80px;   /* Smaller buttons */
-        font-size: 2.5rem; /* Smaller font size */
+        height: 80px; 
+        font-size: 2rem; 
     }
 }
 
 @media (max-width: 400px) {
+    #calculator {
+        transform: scale(0.85); 
+    }
+
     #display {
-        font-size: 3rem; /* Further decrease font size */
+        font-size: 2.5rem; 
     }
 
     button {
-        height: 70px;   /* Even smaller buttons */
-        font-size: 2rem; /* Further decrease font size */
+        height: 70px;
+        font-size: 1.8rem;
     }
 }
